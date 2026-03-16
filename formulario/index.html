@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de aluno</title>
+</head>
+<body>
+    <main>
+        <h1>Cadastro de Aluno</h1>
+        <form action="#" method="post">
+            
+            <div>
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Maria José" required>
+            </div>
+
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+            </div>
+            <div>
+                <label for="cpf">CPF(apenas números):</label>
+                <input 
+                    type="text" 
+                    id="cpf" 
+                    name="cpf" 
+                    required 
+                    inputmode="numeric" 
+                    pattern="\d{11}" 
+                    aria-describedby="cpf-hint"
+                    placeholder="12345678901"
+                >
+                <small id="cpf-hint">Digite os 11 dígitos do CPF sem pontos ou traços.</small>
+            </div>
+
+            <div>
+                <label for="nascimento">Data de Nascimento:</label>
+                <input type="date" id="nascimento" name="nascimento" required>
+            </div>
+
+            <div>
+                <label for="curso">Curso:</label>
+                <select id="curso" name="curso" required>
+                    <option value="">Selecione um curso...</option>
+                    <option value="ads">Ciência de Dados</option>
+                    <option value="si">Engenharia de Software</option>
+                    <option value="cc">Engenharia de Computação</option>
+                </select>
+            </div>
+            <fieldset>
+                <legend>Turno de Estudo:</legend>
+                
+                <div>
+                    <input type="radio" id="manha" name="turno" value="manha" required>
+                    <label for="manha">Manhã</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="tarde" name="turno" value="tarde">
+                    <label for="tarde">Tarde</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="noite" name="turno" value="noite">
+                    <label for="noite">Noite</label>
+                </div>
+            </fieldset>
+            <div>
+                <input type="checkbox" id="termos" name="termos" required>
+                <label for="termos">Eu aceito os termos e condições de uso.</label>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <button type="submit">Enviar Cadastro</button>
+                <button type="reset">Limpar Formulário</button>
+            </div>
+
+        </form>
+    </main>
+</body>
+</html>
